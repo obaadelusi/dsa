@@ -1,5 +1,7 @@
 # Problem Solving Patterns
 
+View Problem Solving Patterns [files on GitHub](https://github.com/obaadelusi/dsa/ProblemSolvingPatterns).
+
 ## Frequency counter
 
 ### Anagrams
@@ -10,43 +12,48 @@ Given two strings, write a function to determine if the second string is an anag
 
 **Understand the problem**
 
--  inputs - 2 strings
-   -  cases - numbers, null, undefined, spaces, empty
--  output - true, false
+-   inputs - 2 strings
+    -   cases - numbers, null, undefined, spaces, empty
+-   output - true, false
 
 **Explore concrete examples**
 
--  Examples: isAnagram('', '') //true
-   -  isAnagram('azz', 'zaa') //false
-   -  isAnagram('cinema', 'iceman') //true
-   -  isAnagram('rat', 'car') //false
+```js
+// Examples:
+isAnagram('', ''); //true
+isAnagram('azz', 'zaa'); //false
+isAnagram('cinema', 'iceman'); //true
+isAnagram('rat', 'car'); //false
+```
 
 ### Solution after breaking down, solving and refactoring
 
 ```js
 function validAnagram(str1, str2) {
-   if (str1.length !== str2.length) {
-      return false;
-   }
+    if (str1.length !== str2.length) {
+        return false;
+    }
 
-   const countObj = {};
+    const countObj = {};
 
-   for (let i = 0; i < str1.length; i++) {
-      let letter = str1[i];
+    for (let i = 0; i < str1.length; i++) {
+        let letter = str1[i];
 
-      countObj[letter] ? (countObj[letter] += 1) : (countObj[letter] = 1);
-   }
+        countObj[letter] ? (countObj[letter] += 1) : (countObj[letter] = 1);
+    }
 
-   for (let i = 0; i < str2.length; i++) {
-      let letter = str2[i];
-      if (!countObj[letter]) {
-         return false;
-      } else {
-         countObj[letter] -= 1;
-      }
-   }
-   return true;
+    for (let i = 0; i < str2.length; i++) {
+        let letter = str2[i];
+        if (!countObj[letter]) {
+            return false;
+        } else {
+            countObj[letter] -= 1;
+        }
+    }
+    return true;
 }
 ```
 
 **BigO is linear i.e. O(N)**
+
+## Multiple pointers

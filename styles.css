@@ -1,60 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
 
 html {
-   font-family: 'Work Sans', system-ui;
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, system-ui;
 }
 
 body {
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background-color: #c2e7d9;
-   margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2e7d9;
+    margin: 0;
 }
 
 .container {
-   width: 90%;
+    width: 90%;
 }
 
 h1 {
-   margin: 0 0 36px 0;
-   font-size: 3rem;
-   color: #0f084b;
-   position: relative;
+    margin: 0 0 36px 0;
+    font-size: 3rem;
+    color: #0f084b;
+    position: relative;
 }
 
-span.ds {
-   text-decoration: underline #b11b25;
-   -webkit-text-decoration: underline #b11b25;
-   text-decoration-thickness: 5px;
-   -webkit-text-decoration-thickness: 5px;
+a {
+    color: inherit;
+    transition: text-decoration 150ms ease-in;
 }
 
-span.al {
-   text-decoration: underline #ffa62b;
-   -webkit-text-decoration: underline #ffa62b;
-   text-decoration-thickness: 5px;
-   -webkit-text-decoration-thickness: 5px;
+h1 a:hover {
+    text-decoration: underline #b300e0;
 }
 
-span.ps {
-   text-decoration: underline 8px #0043e0;
-   -webkit-text-decoration: underline #0043e0;
-   text-decoration-thickness: 5px;
-   -webkit-text-decoration-thickness: 5px;
+a.ds {
+    text-decoration: underline #b11b25;
+    -webkit-text-decoration: underline #b11b25;
+    text-decoration-thickness: 5px;
+    -webkit-text-decoration-thickness: 5px;
+}
+
+a.al {
+    text-decoration: underline #ffa62b;
+    -webkit-text-decoration: underline #ffa62b;
+    text-decoration-thickness: 5px;
+    -webkit-text-decoration-thickness: 5px;
+}
+
+a.ps {
+    text-decoration: underline 8px #0043e0;
+    -webkit-text-decoration: underline #0043e0;
+    text-decoration-thickness: 5px;
+    -webkit-text-decoration-thickness: 5px;
 }
 
 .btn-github {
-   display: inline-flex;
-   text-decoration: none;
-   padding: 0.8em 1em;
-   background-color: #0d0221;
-   color: #fff;
-   border-radius: 5px;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 0.8em 1em;
+    background-color: #0d0221;
+    color: #fff;
+    border-radius: 5px;
+    transition: box-shadow 200ms ease-out;
 }
 
 .btn-github:hover {
-   background-color: #19053f;
+    box-shadow: -3px 4px 6px #00000080;
+    text-decoration: none;
 }
